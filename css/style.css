@@ -60,6 +60,63 @@ body {
     height: 100vh;
 }
 
+.skills-tech{
+	top:35%;
+	width: 100%;
+	color: white;
+	position: absolute;
+}
+
+.tech{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.skills-language{
+	top:65%;
+	width: 100%;
+	color: white;
+	position: absolute;
+}
+.language{
+	display:flex;
+	flex-direction:row-reverse;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-self:center;
+	
+}
+
+.one{
+	order:1;
+}
+.two{
+	order:2;
+}
+.three{
+	order:3;
+}
+.four{
+	order:4;
+}
+.five{
+	order:5;
+}
+.six{
+	order:6;
+}
+.seven{
+	order:7;
+}
+.eight{
+	order:8;
+}
+.nine{
+	order:9;
+}
+
 .footer{
 	background-color: var(--main-bg-color);
 	color: var(--main-text-color);
@@ -68,3 +125,4 @@ body {
 	align-items:center;
 	justify-content:center;
 }
+

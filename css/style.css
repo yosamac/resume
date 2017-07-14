@@ -1,12 +1,14 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto';
 	--main-text-color: #F7F7F7;
 	--secondary-text-color: #A4A4A4;
 	--main-bg-color:rgba(0,0,0,0.92);
 	--menu-bg-color:;
 	--menu-text-color:#5C79BD;
 	--menu-secondary-text-color:#5C79BD;
+
 }
 
 .clearfix:after{

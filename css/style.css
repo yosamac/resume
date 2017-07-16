@@ -116,8 +116,9 @@ body {
 	order:9;
 }
 
-.profile-img{
-	
+.section-container{
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .profile {
@@ -141,6 +142,27 @@ body {
 	text-decoration: none;
 }
 
+.education {
+	padding: 10px;
+
+
+}
+.education-info{
+	border: 1px solid var(--secondary-text-color);
+	margin-bottom: 40px;
+	padding-left: 5px;
+}
+
+.education-info > h4{
+	font-size: 14px;
+	font-weight: lighter;
+	color: var(--secondary-text-color);
+}
+.education-info > p{
+	font-size: 16px;
+	font-weight: bold;
+}
+
 .footer{
 	background-color: var(--main-bg-color);
 	color: var(--main-text-color);
@@ -149,4 +171,6 @@ body {
 	align-items:center;
 	justify-content:center;
 }
+
+
 

@@ -5,10 +5,8 @@ body {
 	--main-text-color: #F7F7F7;
 	--secondary-text-color: #A4A4A4;
 	--main-bg-color:rgba(0,0,0,0.92);
-	--menu-bg-color:;
 	--menu-text-color:#5C79BD;
 	--menu-secondary-text-color:#5C79BD;
-
 }
 
 .clearfix:after{
@@ -88,7 +86,6 @@ body {
 	flex-wrap:wrap;
 	justify-content:space-around;
 	align-self:center;
-	
 }
 
 .one{
@@ -117,6 +114,31 @@ body {
 }
 .nine{
 	order:9;
+}
+
+.profile-img{
+	
+}
+
+.profile {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:center;
+}
+
+.profile-photo > img{
+	height: 300px;
+	max-width: 300px;
+	border-radius: 50%;
+}
+
+.profile-social-nerdwork > h5 {
+	display: block;
+}
+
+.profile-social-nerdwork > h5 > a{
+	padding: 3px;
+	text-decoration: none;
 }
 
 .footer{

@@ -1,0 +1,88 @@
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+:root{
+	--grid-number:12;
+};
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-1{
+	width: calc(100% / var(--grid-number)) ;
+	float: left;
+}
+.col-2{
+	width: calc(calc(100% / var(--grid-number)) * 2);
+	float: left;
+}	
+.col-3{
+	width: calc(calc(100% / var(--grid-number)) * 3);
+	float: left;
+}
+.col-4{
+	width: calc(calc(100% / var(--grid-number)) * 4);
+	float: left;
+}
+.col-5{
+	width: calc(calc(100% / var(--grid-number)) * 5)
+	float: left;
+}
+.col-6{
+	width: calc(calc(100% / var(--grid-number)) * 6)
+	float: left;
+}
+.col-7{
+	width: calc(calc(100% / var(--grid-number)) * 7);
+	float: left;
+}
+.col-8{
+	width: calc(calc(100% / var(--grid-number)) * 8)
+	float: left;
+}
+.col-9{
+	width: calc(calc(100% / var(--grid-number)) * 9);
+	float: left;
+}
+.col-10{
+	width: calc(calc(100% / var(--grid-number)) * 10);
+	float: left;
+}
+.col-11{
+	width: calc(calc(100% / var(--grid-number)) * 11);
+	float: left;
+}
+.col-12{
+	width: calc(calc(100% / var(--grid-number)) * 12);
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

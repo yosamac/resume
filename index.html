@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="./css/grid.css" type="text/css">
+	<link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<title>Interactive resume</title>
 </head>
@@ -37,7 +40,7 @@
 		</div>	
 	</header>
 	<nav class="navbar">
-		<ul class="navbar-list clearfix">
+		<ul class="navbar-list">
 			<li class="navbar-item">
 				<a href="index.html">Home</a>
 				<a href="index.html">Profile</a>
@@ -50,16 +53,19 @@
 		</ul>
 	</nav>
 	<main class="container">
-		<seccion class="profile section-container">
-			<div class="profile-img"></div>
+		<seccion class="profile">
+			<figure class="profile-photo">
+				<img src="./img/yo.jpg" alt="Yosnier">
+			</figure>
 			<div class="profile-info">
 				<h3>Yosnier Samon Macias</h3>
+				<h4 class="position">Software Developer</h4>
 				<div class="profile-social-nerdwork">
-					<span><a href="">location</a></span>
-					<span><a href="http://yosama.com">my website</a></span>
-					<span><a href="https://github.com/yosama/">github yosama/</a></span>
-					<span><a href="http://linkedin.com/in/yosama">linkedin yosama</a></span>
-					<span><a href="https://twitter.com/yomacsa">twiter yomacsa</a></span>
+					<h5 class="fa fa-map-marker"><a href="http://google.es/maps/place/Madrid/">Madrid</a></h5>
+					<h5 class="fa fa-github"><a href="http://github.com/yosama">yosama</a></h5>
+					<h5 class="fa fa-linkedin"><a href="http://linkedin.com/in/yosama">yomacsa</a></h5>
+					<h5 class="fa fa-twitter"><a href="https://twitter.com/yomacsa">yomacsa</a></h5>
+					<h5 class="fa fa-envelope-o"><a href="mailto:yosamac@gmail.com">yosamac@gmail.com</a></h5>
 				</div>
 			</div>
 		</seccion>

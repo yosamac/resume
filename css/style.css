@@ -10,10 +10,17 @@ body {
 	--tech-bg-color:#E1ECF4;
 	--tech-text-color:#7D90A7;
     --box-boder-color:#E5E5E5;
+    --box-skills-color:#F9F9F9;
 }
 
 a {
     text-decoration: none;
+}
+
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
 }
 
 .clearfix:after{
@@ -68,6 +75,8 @@ a {
     height: 100vh;
 }
 
+
+
 .header-title{
     position: absolute;
     top:30%;
@@ -96,7 +105,6 @@ a {
 .section-title{
     text-align: center;
 }
-
 
 .profile {
 	display: flex;
@@ -134,6 +142,11 @@ a {
     border-radius: 5px;
     width: 400px;
     max-height: 400px;
+}
+
+.experience-item:hover{
+    box-shadow: 0 0 0 1px var(--menu-secondary-text-color);
+    transition: all 200ms ease-out;
 }
 
 .experience-header {
@@ -175,6 +188,139 @@ a {
     color: var(--tech-text-color);
 }
 
+.skills{
+   display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.computer-skills-item{
+    background: #fff;
+    border: 1px solid var(--box-boder-color);
+    padding: 4px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    width: 400px;
+    max-height: 400px;
+}
+
+.sprite-git{
+    width: 63px;
+    height: 60px;
+    background-position: -352px -9px;
+}
+
+.img-git{
+    position: relative;
+    top: -10px;
+    left: 190px;
+}
+.sprite-mysql{
+    width: 63px;
+    height: 60px;
+    background-position: -226px -11px;
+}
+.img-mysql{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-android{
+    width: 63px;
+    height: 60px;
+    background-position: -97px -11px;
+}
+.img-android{
+    position: relative;
+    top: -2px;
+    left: 221px;
+}
+.sprite-html5{
+    width: 63px;
+    height: 60px;
+    background-position:  -487px -9px;
+}
+.img-html5{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-css3{
+    width: 63px;
+    height: 60px;
+    background-position:-417px -11px;
+}
+.img-css3{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-java{
+    width: 63px;
+    height: 60px;
+    background-position: -96px -77px;
+}
+.img-java{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-linux{
+    width: 63px;
+    height: 60px;
+    background-position: -33px -78px;
+}
+.img-linux{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-nodejs{
+    width: 63px;
+    height: 60px;
+    background-position: -284px -11px;
+}
+.img-nodejs{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-php{
+    width: 63px;
+    height: 60px;
+    background-position: -161px -11px;
+}
+.img-php{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-jquery{
+    width: 63px;
+    height: 60px;
+    background-position: -162px -79px;
+}
+.img-jquery{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.sprite-osx{
+    width: 63px;
+    height: 60px;
+    background-position: -33px -11px;
+}
+.img-osx{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+
+
 .education {
 	padding: 10px;
 }
@@ -194,33 +340,6 @@ a {
 	font-size: 14px;
 	font-weight: lighter;
 	color: var(--secondary-text-color);
-}
-
-.flip{
-    height: 305px;
-    position: relative;
-}
-
-.flip-img{
-    position: absolute;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    transition:transform 1s;
-}
-
-.back{
-    transform:rotateY(-180deg);
-    -webkit-transform:rotateY(-180deg);
-}
-
-.flip:hover .front{
-    transform:rotateY(-180deg);
-    -webkit-transform:rotateY(-180deg);
-}
-
-.flip:hover .back{
-    transform:rotateY(0deg);
-    -webkit-transform:rotateY(0deg);
 }
 
 .project-tech {

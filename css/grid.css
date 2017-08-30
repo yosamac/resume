@@ -15,7 +15,7 @@
 }
 
 .col-1{
-	width: calc(100% / var(--grid-number)) ;
+	width: calc(100% / var(--grid-number));
 	float: left;
 }
 .col-2{
@@ -31,11 +31,11 @@
 	float: left;
 }
 .col-5{
-	width: calc(calc(100% / var(--grid-number)) * 5)
+	width: calc(calc(100% / var(--grid-number)) * 5);
 	float: left;
 }
 .col-6{
-	width: calc(calc(100% / var(--grid-number)) * 6)
+	width: calc(calc(100% / var(--grid-number)) * 6);
 	float: left;
 }
 .col-7{
@@ -43,7 +43,7 @@
 	float: left;
 }
 .col-8{
-	width: calc(calc(100% / var(--grid-number)) * 8)
+	width: calc(calc(100% / var(--grid-number)) * 8);
 	float: left;
 }
 .col-9{

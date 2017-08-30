@@ -6,7 +6,7 @@
 
 :root{
 	--grid-number:12;
-};
+}
 
 .row:before, .row:after {
 	content: "";

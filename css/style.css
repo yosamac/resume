@@ -9,6 +9,11 @@ body {
 	--menu-secondary-text-color:#5C79BD;
 	--tech-bg-color:#E1ECF4;
 	--tech-text-color:#7D90A7;
+    --box-boder-color:#E5E5E5;
+}
+
+a {
+    text-decoration: none;
 }
 
 .clearfix:after{
@@ -47,81 +52,51 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active a {
 	color: var(--main-text-color);
-	background-color: var (--secondary-text-color);
+	background-color: var(--secondary-text-color);
 }
- .navbar > .navbar-list > .navbar-item a:hover{
+
+.navbar > .navbar-list > .navbar-item a:hover{
  	color: var(--main-text-color) ;
  	background-color: var(--menu-text-color);
- }
+}
 
 .header-img{
 	background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../img/portada.jpg);
+    background-image: url(../img/backstretch.jpg);
     height: 100vh;
 }
 
-.skills-tech{
-	top:35%;
-	width: 100%;
-	color: white;
-	position: absolute;
+.header-title{
+    position: absolute;
+    top:30%;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 100px;
 }
 
-.tech{
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-around;
-}
-
-.skills-language{
-	top:65%;
-	width: 100%;
-	color: white;
-	position: absolute;
-}
-.language{
-	display:flex;
-	flex-direction:row-reverse;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	align-self:center;
-}
-
-.one{
-	order:1;
-}
-.two{
-	order:2;
-}
-.three{
-	order:3;
-}
-.four{
-	order:4;
-}
-.five{
-	order:5;
-}
-.six{
-	order:6;
-}
-.seven{
-	order:7;
-}
-.eight{
-	order:8;
-}
-.nine{
-	order:9;
+.header-quoted {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 28px;
 }
 
 .section-container{
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+
+.section-title{
+    text-align: center;
+}
+
 
 .profile {
 	display: flex;
@@ -140,8 +115,64 @@ body {
 }
 
 .profile-social-nerdwork > h5 > a{
-	padding: 3px;
+    padding: 3px;
 	text-decoration: none;
+}
+
+.experiences{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.experience-item{
+    background: #fff;
+    border: 1px solid var(--box-boder-color);
+    padding: 4px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    width: 400px;
+    max-height: 400px;
+}
+
+.experience-header {
+    text-align: center;
+}
+
+.experience-detail {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-detail > i{
+    padding-bottom: 20px;
+}
+
+.experience-detail .fa  {
+    display: block;
+}
+
+.fa > .position {
+    font-weight: bold;
+    font-size:20px ;
+}
+.experience-tech{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    width: 100%;
+}
+
+.skill-tech-item{
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: var(--tech-bg-color);
+    color: var(--tech-text-color);
 }
 
 .education {
@@ -149,7 +180,7 @@ body {
 }
 
 .education-item{
-	border: 1px solid var(--secondary-text-color);
+	border: 1px solid var(--box-boder-color);
 	margin-bottom: 40px;
 	padding-left: 10px;
 }
@@ -165,34 +196,39 @@ body {
 	color: var(--secondary-text-color);
 }
 
-.experience-item{
-	border: 1px solid  var(--secondary-text-color);
-	border-top: 2px solid var(--menu-text-color);
-	padding: 10px;
-	margin-bottom: 30px;
+.flip{
+    height: 305px;
+    position: relative;
 }
 
-.experience-tech{
-	display: flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	align-items:center;
-	width: 100%;
+.flip-img{
+    position: absolute;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    transition:transform 1s;
 }
 
-.experience-tech-item{
-	padding: 5px;
-	background-color: var(--tech-bg-color);
-	color: var(--tech-text-color);
+.back{
+    transform:rotateY(-180deg);
+    -webkit-transform:rotateY(-180deg);
 }
 
-.position i{
-	padding-right: 5px;
+.flip:hover .front{
+    transform:rotateY(-180deg);
+    -webkit-transform:rotateY(-180deg);
 }
 
-a {
-	text-decoration: none;	
+.flip:hover .back{
+    transform:rotateY(0deg);
+    -webkit-transform:rotateY(0deg);
+}
+
+.project-tech {
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
 }
 
 .footer{

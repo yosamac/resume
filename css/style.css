@@ -75,8 +75,6 @@ a {
     height: 100vh;
 }
 
-
-
 .header-title{
     position: absolute;
     top:30%;
@@ -172,6 +170,7 @@ a {
     font-weight: bold;
     font-size:20px ;
 }
+
 .experience-tech{
     display: flex;
     flex-direction:row;
@@ -197,15 +196,8 @@ a {
     width: 100%;
 }
 
-.computer-skills-item{
-    background: #fff;
-    border: 1px solid var(--box-boder-color);
-    padding: 4px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    border-radius: 5px;
-    width: 400px;
-    max-height: 400px;
+.skills > span{
+    margin: 20px;
 }
 
 .sprite-git{
@@ -213,113 +205,209 @@ a {
     height: 60px;
     background-position: -352px -9px;
 }
-
-.img-git{
-    position: relative;
-    top: -10px;
-    left: 190px;
-}
 .sprite-mysql{
     width: 63px;
     height: 60px;
     background-position: -226px -11px;
 }
-.img-mysql{
-    position: relative;
-    top:-500px;
-    left: 190px;
-}
 .sprite-android{
     width: 63px;
     height: 60px;
-    background-position: -97px -11px;
-}
-.img-android{
-    position: relative;
-    top: -2px;
-    left: 221px;
+    background-position: -97px -8px;
 }
 .sprite-html5{
     width: 63px;
     height: 60px;
     background-position:  -487px -9px;
 }
-.img-html5{
-    position: relative;
-    top:-500px;
-    left: 190px;
-}
 .sprite-css3{
     width: 63px;
     height: 60px;
     background-position:-417px -11px;
-}
-.img-css3{
-    position: relative;
-    top:-500px;
-    left: 190px;
 }
 .sprite-java{
     width: 63px;
     height: 60px;
     background-position: -96px -77px;
 }
-.img-java{
-    position: relative;
-    top:-500px;
-    left: 190px;
-}
 .sprite-linux{
     width: 63px;
     height: 60px;
     background-position: -33px -78px;
 }
-.img-linux{
-    position: relative;
-    top:-500px;
-    left: 190px;
-}
-.sprite-nodejs{
+.sprite-mongodb{
     width: 63px;
     height: 60px;
     background-position: -284px -11px;
 }
-.img-nodejs{
-    position: relative;
-    top:-500px;
-    left: 190px;
+.sprite-nodejs{
+    width: 63px;
+    height: 60px;
+    background-position: -100px -145px;
+}
+.sprite-xcode{
+    width: 63px;
+    height: 60px;
+    background-position: -488px -80px;
+}
+.sprite-sqldeveloper{
+    width: 63px;
+    height: 60px;
+    background-position: -224px -81px;
+}
+.sprite-webstorm{
+    width: 63px;
+    height: 60px;
+    background-position: -284px -81px;
+}
+.sprite-sublimetext{
+    width: 63px;
+    height: 60px;
+    background-position: -30px -145px;
+}
+.sprite-objc{
+    width: 63px;
+    height: 60px;
+    background-position: -285px -149px;
+}
+.sprite-javascript{
+    width: 63px;
+    height: 60px;
+    background-position: -417px -80px;
+}
+.sprite-sketch{
+    width: 63px;
+    height: 60px;
+    background-position: -162px -149px;
+}
+.sprite-androidstudio{
+    width: 63px;
+    height: 60px;
+    background-position: -223px -149px;
+}
+.sprite-netbeans{
+    width: 63px;
+    height: 60px;
+    background-position: -100px -212px;
+}
+.sprite-eclipse{
+    width: 63px;
+    height: 60px;
+    background-position: -32px -212px;
+}
+.sprite-vstudio{
+    width: 63px;
+    height: 60px;
+    background-position: -351px -144px;
+}
+.sprite-inkscape{
+    width: 63px;
+    height: 60px;
+    background-position: -284px -213px;
+}
+.sprite-joomla{
+    width: 63px;
+    height: 60px;
+    background-position: -162px -213px;;
+}
+.sprite-msaccess{
+    width: 63px;
+    height: 60px;
+    background-position: -352px -80px;
+}
+.sprite-sqlserver{
+    width: 63px;
+    height: 60px;
+    background-position: -417px -145px;
+}
+.sprite-svn{
+    width: 63px;
+    height: 60px;
+    background-position: -417px -212px;
+}
+.sprite-delphi{
+    width: 63px;
+    height: 60px;
+    background-position: -352px -212px;
+}
+.sprite-win2server{
+    width: 63px;
+    height: 60px;
+    background-position: -223px -212px;
 }
 .sprite-php{
     width: 63px;
     height: 60px;
     background-position: -161px -11px;
 }
-.img-php{
-    position: relative;
-    top:-500px;
-    left: 190px;
-}
 .sprite-jquery{
     width: 63px;
     height: 60px;
     background-position: -162px -79px;
-}
-.img-jquery{
-    position: relative;
-    top:-500px;
-    left: 190px;
 }
 .sprite-osx{
     width: 63px;
     height: 60px;
     background-position: -33px -11px;
 }
-.img-osx{
+
+.img-git{
+    position: relative;
+    top: -10px;
+    left: 190px;
+}
+
+.img-mysql{
     position: relative;
     top:-500px;
     left: 190px;
 }
 
+.img-android{
+    position: relative;
+    top: -2px;
+    left: 221px;
+}
+.img-html5{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-css3{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-java{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-linux{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-mongodb{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-php{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-jquery{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
+.img-osx{
+    position: relative;
+    top:-500px;
+    left: 190px;
+}
 
 .education {
 	padding: 10px;
@@ -358,8 +446,3 @@ a {
 	align-items:center;
 	justify-content:center;
 }
-
-
-
-
-

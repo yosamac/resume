@@ -102,6 +102,10 @@ a {
 
 .section-title{
     text-align: center;
+    font-variant: all-small-caps;
+    font-weight: 900;
+    color:rgba(0,0,0,0.85);
+
 }
 
 .profile {
@@ -171,8 +175,9 @@ a {
 }
 
 .fa > .position, .fa > .degree {
-    font-weight: bold;
+    font-weight: 500;
     font-size:20px ;
+    font-variant: all-small-caps;
 }
 
 .experience-tech{

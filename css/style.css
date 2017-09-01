@@ -129,7 +129,7 @@ a {
 	text-decoration: none;
 }
 
-.work-experience-flex, .education-flex{
+.work-experience-flex, .education-flex, .course-flex{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -139,7 +139,7 @@ a {
 
 }
 
-.experience-item, .education-item{
+.experience-item, .education-item, .course-item{
     background: #fff;
     border: 1px solid var(--box-boder-color);
     padding: 4px;
@@ -155,22 +155,22 @@ a {
     transition: all 200ms ease-out;
 }
 
-.experience-header, .education-header {
+.experience-header, .education-header, .course-header {
     text-align: center;
 }
 
-.experience-detail, .education-detail {
+.experience-detail, .education-detail, .course-detail {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
-.experience-detail > i, .education-detail > i{
+.experience-detail > i, .education-detail > i, .course-detail >i{
     padding-bottom: 20px;
 }
 
-.experience-detail .fa, .education-detail .fa  {
+.experience-detail .fa, .education-detail .fa, .course-detail .fa {
     display: block;
 }
 
@@ -209,7 +209,7 @@ a {
 }
 
 .skills-flex > span{
-    margin: 20px;
+    margin: 20px 20px;
 }
 
 .sprite-git{
@@ -433,6 +433,16 @@ a {
 	font-size: 14px;
 	font-weight: lighter;
 	color: var(--secondary-text-color);
+}
+
+.about-me > .me-video {
+    float: left;
+    max-width: 50%;
+}
+
+.about-me > .me-info {
+    float: right;
+    max-width: 50%;
 }
 
 .project-tech {

@@ -125,13 +125,17 @@ a {
 	text-decoration: none;
 }
 
-.experiences{
+.work-experience-flex, .education-flex{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-.experience-item{
+.work-experience{
+
+}
+
+.experience-item, .education-item{
     background: #fff;
     border: 1px solid var(--box-boder-color);
     padding: 4px;
@@ -147,26 +151,26 @@ a {
     transition: all 200ms ease-out;
 }
 
-.experience-header {
+.experience-header, .education-header {
     text-align: center;
 }
 
-.experience-detail {
+.experience-detail, .education-detail {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
-.experience-detail > i{
+.experience-detail > i, .education-detail > i{
     padding-bottom: 20px;
 }
 
-.experience-detail .fa  {
+.experience-detail .fa, .education-detail .fa  {
     display: block;
 }
 
-.fa > .position {
+.fa > .position, .fa > .degree {
     font-weight: bold;
     font-size:20px ;
 }
@@ -180,6 +184,9 @@ a {
     width: 100%;
 }
 
+.skills{
+
+}
 .skill-tech-item{
     padding: 5px;
     margin-bottom: 5px;
@@ -187,7 +194,7 @@ a {
     color: var(--tech-text-color);
 }
 
-.skills{
+.skills-flex{
    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -196,7 +203,7 @@ a {
     width: 100%;
 }
 
-.skills > span{
+.skills-flex > span{
     margin: 20px;
 }
 
@@ -412,16 +419,9 @@ a {
 .education {
 	padding: 10px;
 }
-
 .education-item{
-	border: 1px solid var(--box-boder-color);
-	margin-bottom: 40px;
-	padding-left: 10px;
-}
-
-.education-item > p{
-	font-size: 16px;
-	font-weight: bold;
+    width: 300px;
+    max-height: 300px;
 }
 
 .time-info {

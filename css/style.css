@@ -4,13 +4,16 @@ body {
 	font-family: 'Roboto';
 	--main-text-color: #F7F7F7;
 	--secondary-text-color: #A4A4A4;
+    --third-text-color:#F9F9F9;
 	--main-bg-color:rgba(0,0,0,0.92);
-	--menu-text-color:#5C79BD;
+    --section-bg-color:#3DA0D4;
+	--menu-text-color:#42B5EF;
 	--menu-secondary-text-color:#5C79BD;
 	--tech-bg-color:#E1ECF4;
 	--tech-text-color:#7D90A7;
     --box-boder-color:#E5E5E5;
     --box-skills-color:#F9F9F9;
+    background-color: #DCDCDC;
 }
 
 a {
@@ -64,7 +67,7 @@ a {
 
 .navbar > .navbar-list > .navbar-item a:hover{
  	color: var(--main-text-color) ;
- 	background-color: var(--menu-text-color);
+ 	background-color: var(--section-bg-color);
 }
 
 .header-img{
@@ -105,7 +108,6 @@ a {
     font-variant: all-small-caps;
     font-weight: 900;
     color:rgba(0,0,0,0.85);
-
 }
 
 .profile {
@@ -151,7 +153,7 @@ a {
 }
 
 .experience-item:hover{
-    box-shadow: 0 0 0 1px var(--menu-secondary-text-color);
+    box-shadow: 0 0 0 1px var(--section-bg-color);
     transition: all 200ms ease-out;
 }
 
@@ -443,6 +445,81 @@ a {
 .about-me > .me-info {
     float: right;
     max-width: 50%;
+}
+
+.form-row{
+    padding: 10px;
+    color:var(--box-skills-color);
+}
+
+.section-reverse{
+    background-color: var(--section-bg-color);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    color: #fff;
+}
+
+.centered{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.contact input[type="text"], #contact textarea {
+    background-color: #fff;
+}
+
+input[type="text"], textarea {
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1em;
+    font-style: italic;
+    width: 96%;
+    padding: 0 2%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1em;
+    background-color: #ccc;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    resize: none;
+}
+.personal-info > .form-row > label, .meeting-title {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+.meeting-option{
+    font-variant: all-small-caps;
+    font-size: large;
+}
+
+textarea {
+    height: auto;
+    line-height: 1em;
+    padding: 2%;
+}
+
+input[type=button], input[type=submit], button {
+    background-color: #2181BD!important;
+    border: none;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+
 }
 
 .project-tech {

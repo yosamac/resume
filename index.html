@@ -377,15 +377,73 @@
                 </video>
             </div>
             <div class="me-info">
-                <h2>What do I do in my free time</h2>
-                <strong>Profession</strong>
+                <h2>About me</h2>
                 <p class="me-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quibusdam facilis provident numquam quisquam architecto error temporibus maxime eos sapiente inventore neque, corporis, recusandae eligendi eveniet labore incidunt. Ad, iste.
-                </p>
-                <strong>Hobies</strong>
+                    I am a Software Developer with over 4 years of experience working with iOs, Android, Java and SQL for the Energy and the Banking & Financial Sector´s companies in both Spain and Cuba.
+                    I am currently on my way to becoming a Full Stack Developer through the Web Startup Engineering Bootcamp imparted by KeepCoding.
                 <p class="me-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quibusdam facilis provident numquam quisquam architecto error temporibus maxime eos sapiente inventore neque, corporis, recusandae eligendi eveniet labore incidunt. Ad, iste.
+                    My passion is developing mobile application as well as webs, following the key principle that allows me to achieve a better performance: improve by simplifying. My goal and what I do is to make easier users´ experience by developing simpler designs.                </p>
                 </p>
+            </div>
+        </section>
+        <section id="contact" class="section-container section-reverse contact">
+            <div class="container centered">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title section-reverse">Let's get in touch</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="centered text-center">
+                        <div id="form-message" class="meeting-title"></div>
+                        <form id="form-contact" name="form-contact" novalidate="novalidate" _lpchecked="1">
+                            <div class="col-6 personal-info">
+                                <div class="form-row">
+                                    <label for="name">What's your name?</label>
+                                    <input type="text" name="name" id="name"  value=""  placeholder="Your name...">
+                                </div>
+                                <div class="form-row">
+                                    <label for="name">What's your e-mail?</label>
+                                    <input type="text" name="email" id="email" value="" placeholder="hello@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" data-default="Your email...">
+                                </div>
+                                <div class="form-row">
+                                    <label for="name">What's your phone number?</label>
+                                    <input type="text" name="phone" id="phone" value="" placeholder="Your phone..." pattern="^[9|6|7][0-9]{8}">
+                                </div>
+                            </div>
+                            <div class="col-6 meeting-info">
+                                <div class="form-row">
+                                    <div>
+                                        <label class="meeting-title">How did you hear about me?</label>
+                                    </div>
+                                    <label class="meeting-option" for="meeting_1">Family and friends</label>
+                                    <input type="radio" id="meeting_1" name="meeting_options" value="Rescue" required>
+
+                                    <label class="meeting-option" for="meeting_2">Social networks</label>
+                                    <input type="radio" id="meeting_2" name="meeting_options" value="Account settings" required>
+
+                                    <label  class="meeting-option" for="meeting_3">School and University</label>
+                                    <input type="radio" id="meeting_3" name="meeting_options" value="Account settings" required>
+
+                                    <label  class="meeting-option" for="meeting_4">Other</label>
+                                    <input type="radio" id="meeting_4" name="meeting_options" value="Shot and explosive" required>
+                                </div>
+                                <div class="form-row">
+                                    <textarea name="message" id="description" rows="3" placeholder="Your description..."></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <label class="meeting-title"  for="name">What do you have in mind?</label>
+                                    <textarea name="message" id="message" rows="3" placeholder="Your message..."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-1-3 centered">
+                                <button class="button" id="submit-contact">Send the raven!</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </section>
 	</main>

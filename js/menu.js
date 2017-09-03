@@ -52,7 +52,7 @@ function deleteClassActive (){
 var techSkills = document.getElementsByClassName("sprite");
 function deleteClassAnimation(){
     for (var i = 0; i < techSkills.length; i ++) {
-        techSkills[i].classList.remove('animated', 'infinite','rubberBand');
+        techSkills[i].classList.remove('animated', 'infinite','tada');
     }
 }
 
@@ -120,7 +120,7 @@ function changeMenuStyle (){
         deleteClassActive()
         document.querySelector('a[href$="skills"]').parentNode.classList.add('active');
         for (var i = 0; i < techSkills.length; i ++) {
-            techSkills[i].classList.add('animated','infinite','rubberBand');
+            techSkills[i].classList.add('animated','infinite','tada');
         }
     }  else if (pageOffset >= offsetEducation && pageOffset < offsetCourse) {
         if (!previous || previous !== 5) {

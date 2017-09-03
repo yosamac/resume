@@ -46,6 +46,7 @@ a {
 	width:100%;
 	position: fixed;
 	top: 0;
+    z-index: 1;
 }
 
 .navbar > .navbar-list {
@@ -69,7 +70,7 @@ a {
 
 .navbar > .navbar-list > .navbar-item.active a {
 	color: var(--main-text-color);
-	background-color: var(--secondary-text-color);
+	background-color: var(--section-bg-color);
 }
 
 .navbar > .navbar-list > .navbar-item a:hover{
@@ -112,23 +113,12 @@ a {
     white-space: nowrap;
     overflow: hidden;
     border-right: .1em solid #D1ECFD;
-
-
     -webkit-animation:typing 5s steps(18, end),
     blink-caret .5s step-end infinite alternate;
     -o-animation:typing 5s steps(18, end),
     blink-caret .5s step-end infinite alternate;
     animation:typing 5s steps(18, end),
     blink-caret .5s step-end infinite alternate;
-
-
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 60%;*/
-    /*width: 100%;*/
-    /*text-align: center;*/
-    /*color: white;*/
-    /*font-size: 28px;*/
 }
 
 .section-container{
@@ -500,12 +490,9 @@ a {
     padding: 15px;
     box-sizing: border-box;
 }
-
-
 .contact input[type="text"], #contact textarea {
     background-color: #fff;
 }
-
 input[type="text"], textarea {
     background-color: #fff;
     font-family: inherit;
@@ -552,7 +539,6 @@ input[type=button], input[type=submit], button {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 0.15em;
-
 }
 
 .footer{

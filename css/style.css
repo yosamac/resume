@@ -490,10 +490,10 @@ a {
     padding: 15px;
     box-sizing: border-box;
 }
-.contact input[type="text"], #contact textarea {
+.contact input[type="text"], #contact textarea, .contact input[type="email"], .contact input[type="tel"] {
     background-color: #fff;
 }
-input[type="text"], textarea {
+input[type="text"], input[type="email"], input[type="tel"], textarea {
     background-color: #fff;
     font-family: inherit;
     font-size: 1em;
@@ -510,12 +510,17 @@ input[type="text"], textarea {
     border-radius: 5px;
     resize: none;
 }
+.meeting-message-hidden {
+    display: none;
+}
+
 .personal-info > .form-row > label, .meeting-title {
     display: block;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 10px;
 }
+
 .meeting-option{
     font-variant: all-small-caps;
     font-size: large;
@@ -540,6 +545,26 @@ input[type=button], input[type=submit], button {
     font-weight: 900;
     letter-spacing: 0.15em;
 }
+
+.errormsg {
+    color: #dd4b39;
+    display: block;
+    line-height: 17px;
+    margin: .5em 0 0;
+}
+
+.alertmsg {
+    color: #E9F015;
+    display: block;
+    line-height: 17px;
+    margin: .5em 0 0;
+}
+
+.invalid {
+    border: 2px solid #dd4b39;
+}
+
+
 
 .footer{
 	background-color: var(--main-bg-color);

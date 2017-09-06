@@ -1,6 +1,3 @@
-/**
- * Created by yos on 03/09/2017.
- */
 
 var navbarItems = document.getElementsByClassName("navbar-item");
 
@@ -19,7 +16,6 @@ for (var i = 0; i < navbarItems.length; i ++) {
 
 function getElementByIdAndScroll (elementId) {
     var element;
-
     if (elementId === '') {
         element = document.getElementsByClassName("header")[0];
     } else {

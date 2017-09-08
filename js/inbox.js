@@ -1,8 +1,8 @@
 
 const url = "http://127.0.0.1:8000/api/messages/";
-var messages = [];
 
-function drawMessages(){
+function drawMessages(messages){
+    $("#inbox-table > tbody").empty()
     var messagesTable = document.getElementById("inbox-table");
     var tbody = document.createElement("tbody");
 
@@ -41,6 +41,7 @@ function drawMessages(){
                     default :{
                         removeButton = document.createElement("button")
                         removeButton.classList.add('fa','fa-trash','button-remove');
+                        removeButton.setAttribute("data-id",messages[i].id);
                         cell.appendChild(removeButton);
                     }
                 }
@@ -53,6 +54,7 @@ function drawMessages(){
 }
 
 var list = function () {
+    var messages = [];
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.setRequestHeader("Content-Type", "application/json");
@@ -60,8 +62,8 @@ var list = function () {
         if (request.readyState === 4) {
             console.log(request.responseText);
             messages = JSON.parse(request.responseText);
-            drawMessages()
-        } else if (XHR.readyState === 4 && XHR.status === 404) {
+            drawMessages(messages);
+        } else if (request.readyState === 4 && request.status === 404) {
             console.log("Page not found");
         }
     }
@@ -100,3 +102,9 @@ var getMessage = function (id) {
 }
 
 list();
+
+$(document).on('click', '.button-remove', function (){
+    var id = $(this).attr('data-id');
+    console.log(id);
+    remove(id);
+});

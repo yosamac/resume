@@ -27,6 +27,7 @@ function drawMessages(messages){
                 switch (j) {
                     case 1: {
                         cell.setAttribute("colspan","2");
+                        cell.setAttribute("title", messages[i].email)
                         value = document.createTextNode(messages[i].name)
                         cell.appendChild(value)
                         break;
@@ -92,13 +93,31 @@ var getMessage = function (id) {
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             console.log(request.responseText);
-            messages = JSON.parse(request.responseText);
-            drawMessageDetail(id)
+            message = JSON.parse(request.responseText);
+            drawMessageDetail(message)
         } else if (request.readyState === 4 && request.status === 404) {
             console.log("Page not found");
         }
     }
     request.send();
+}
+
+function drawMessageDetail(message) {
+    if (message !== "undefined") {
+        var subject = (!message.meeting_msg) ? message.meeting_opt:message.meeting_opt + " - " + message.meeting_msg;
+        var a = document.querySelectorAll("a")[9];
+        a.setAttribute("href", "mailto:"+message.email);
+        var sender = document.getElementById("sender");
+        sender.setAttribute("title", message.email);
+        sender.innerHTML = message.name;
+        document.getElementById("phone").innerHTML = message.phone;
+        document.getElementById("subject").innerHTML = subject;
+        document.getElementById("message-content").innerHTML = message.user_msg;
+    } else  {
+        noSelectedMessageAlert = document.createElement("h3");
+        noSelectedMessageAlert.classList.add("section-title");
+        noSelectedMessageAlert.innerHTML = "There is no message selected";
+    }
 }
 
 list();
@@ -108,3 +127,9 @@ $(document).on('click', '.button-remove', function (){
     console.log(id);
     remove(id);
 });
+
+$(document).on('click', 'tr[data-id]', function(){
+    var id = $(this).attr('data-id');
+    getMessage(id);
+})
+

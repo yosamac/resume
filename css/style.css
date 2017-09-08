@@ -585,6 +585,10 @@ td {
     width: 5px;
 }
 
+tbody > tr:hover {
+    cursor: pointer;
+}
+
 .button-remove {
     background-color: #E84C3D !important;
     padding: 5px;

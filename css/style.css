@@ -73,6 +73,7 @@ a {
 	background-color: var(--section-bg-color);
 }
 
+tbody > tr:hover,
 .navbar > .navbar-list > .navbar-item a:hover{
  	color: var(--main-text-color) ;
  	background-color: var(--section-bg-color);
@@ -556,6 +557,45 @@ input[type=button], input[type=submit], button {
 
 .invalid {
     border: 2px solid #dd4b39;
+}
+
+.inbox > .section-title {
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+thead > tr {
+    background-color: #F5F5F5;
+}
+
+th {
+    height: 30px;
+    text-align: left
+}
+
+th, 
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    width: 5px;
+}
+
+.button-remove {
+    background-color: #E84C3D !important;
+    padding: 5px;
+}
+
+.message-body {
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.phone {
+    float: right; 
 }
 
 .footer{

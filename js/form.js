@@ -4,17 +4,18 @@
 var contactForm = document.getElementById('form-contact');
 var firtsname = document.getElementById('firstname');
 var email = document.getElementById('email');
-var  phone = document.getElementById('phone');
+var phone = document.getElementById('phone');
 var meetingOptions  = {
     meetingOption1: document.getElementById('meeting_1'),
     meetingOption2: document.getElementById('meeting_2'),
     meetingOption3: document.getElementById('meeting_3'),
     meetingOption4: document.getElementById('meeting_4')
 }
-btnSend = document.getElementById('btn-send');
 var meetingMessage = document.getElementById('meeting-message');
 var userMessage = document.getElementById('user-message');
 var errorMessage = "You can't leave this empty."
+var btnSend = document.getElementById('btn-send');
+const url = "http://127.0.0.1:8000/api/messages/";
 
 document.addEventListener('click', getEventTarget);
 document.addEventListener('keyup', getEventTarget);
@@ -80,10 +81,11 @@ function validateContactForm (event) {
         buildAlertMessage(invalidNode, message);
         return false;
     }
-    
+
     btnSend.setAttribute("disabled", "");
     btnSend.appendChild(loadingIcon);
     event.preventDefault();
+    sendMessage();
 }
 
 function buildAlertMessage(element, msg){
@@ -99,18 +101,21 @@ function buildAlertMessage(element, msg){
 }
 
 contactForm.addEventListener('change', showDescriptionTextArea);
-
-function showDescriptionTextArea() {
-    var descriptionTextArea = document.getElementById("meeting-message");
-    descriptionTextArea.style.display =  (meetingOptions.meetingOption4.checked === false) ? "none" : "inline-block";
-}
-
 userMessage.addEventListener('keyup', showAlertWordLeft);
 userMessage.addEventListener('click', function(event) {
     if (this.readOnly === true ){
         this.readOnly = false;
     }
 })
+
+function showDescriptionTextArea() {
+    if (meetingOptions.meetingOption4.checked === false){
+        meetingMessage.classList.add('hidden');
+        meetingMessage.value = "";
+    } else {
+        meetingMessage.classList.remove('hidden');
+    }
+}
 
 function showAlertWordLeft(event) {
     const wordsMax = 250;
@@ -139,4 +144,51 @@ function showAlertWordLeft(event) {
             this.readOnly = true;
         }
     } 
+}
+
+function sendMessage() {
+    var data = {
+        name: firtsname.value,
+        email: email.value,
+        phone: phone.value,
+        meeting_opt: document.querySelector('input[type=radio]:checked').value, 
+        user_msg: userMessage.value
+    }
+
+    if (meetingMessage.value !== "") {
+        data['meeting_msg'] = meetingMessage.value;
+    }
+    console.log(data);
+    insert(data);
+    contactForm.reset();
+}
+
+var insert = function (data){
+    var xhr;
+    if (window.XMLHttpRequest){
+        xhr = new XMLHttpRequest();
+    }
+
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+           getServerResult(xhr.responseText);
+        } else if (xhr.readyState === 4 && xhr.status === 404) {
+            console.log("Page not found");
+        }
+    }
+    var usrMsg = "";
+    if (meetingMessage.value !== "") {
+        usrMsg = meetingMessage.value;
+    }
+    xhr.send(JSON.stringify(data));
+}
+
+var messages = [];
+function getServerResult(result){
+    messages.push(JSON.parse(result));
+    btnSend.removeAttribute("disabled");
+    btnSend.removeChild(loadingIcon);
+    console.log(messages);
 }

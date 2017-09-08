@@ -160,10 +160,6 @@ a {
     justify-content: center;
 }
 
-.work-experience{
-
-}
-
 .experience-item, .education-item, .course-item{
     background: #fff;
     border: 1px solid var(--box-boder-color);
@@ -214,9 +210,6 @@ a {
     width: 100%;
 }
 
-.skills{
-
-}
 .skill-tech-item{
     padding: 5px;
     margin-bottom: 5px;
@@ -470,7 +463,7 @@ a {
     max-width: 50%;
 }
 
-.form-row{
+.form-row {
     padding: 10px;
     color:var(--box-skills-color);
 }
@@ -510,7 +503,8 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
     border-radius: 5px;
     resize: none;
 }
-.meeting-message-hidden {
+
+.hidden {
     display: none;
 }
 
@@ -563,8 +557,6 @@ input[type=button], input[type=submit], button {
 .invalid {
     border: 2px solid #dd4b39;
 }
-
-
 
 .footer{
 	background-color: var(--main-bg-color);

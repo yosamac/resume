@@ -149,7 +149,7 @@ function changeMenuStyle (){
         deleteClassActive()
         deleteClassAnimation();
         document.querySelector('a[href$="about-me"]').parentNode.classList.add('active');
-    }  else if (pageOffset >= offsetContact) {
+    }  else if (pageOffset >= offsetContact || pageOffset >= 2937) {
         if (!previous || previous !== 8) {
             previous = 8;
         } else if (previous === 8) {

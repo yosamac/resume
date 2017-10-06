@@ -38,3 +38,13 @@ definidas en nuestra página web.
 
 La página web tiene que ser visible correctamente tanto en Google Chrome, como en Firefox y en Internet Explorer versión 11 o EDGE.
 No se permite el uso de frameworks externos como Bootstrap.
+
+==================================================================================================
+
+## Start
+
+	python server.py
+
+Go to the browser and writer: 
+	
+	localhost:8000

@@ -122,13 +122,6 @@ tbody > tr:hover,
     width: 18ch;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .1em solid #D1ECFD;
-    -webkit-animation:typing 5s steps(18, end),
-    blink-caret .5s step-end infinite alternate;
-    -o-animation:typing 5s steps(18, end),
-    blink-caret .5s step-end infinite alternate;
-    animation:typing 5s steps(18, end),
-    blink-caret .5s step-end infinite alternate;
 }
 
 .section-container {

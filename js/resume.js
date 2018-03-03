@@ -84,7 +84,7 @@ function changeMenuStyle (){
         }
         deleteClassActive();
         deleteClassAnimation();
-        document.querySelector('a[href="#"]').parentNode.classList.add('active');
+        
     } else if (pageOffset >= offsetProfile && pageOffset < offsetExperience) {
         if (!previous || previous !== 2){
             previous = 2;

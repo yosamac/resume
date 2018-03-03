@@ -31,7 +31,7 @@ a {
 }
 
 .sprite {
-    background-image: url(../img/spritesheet.png);
+    background-image: url(https://yosamac.com/img/spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }

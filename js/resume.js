@@ -179,7 +179,6 @@ var meetingMessage = document.getElementById('meeting-message');
 var userMessage = document.getElementById('user-message');
 var errorMessage = "You can't leave this empty."
 var btnSend = document.getElementById('btn-send');
-const url = "http://127.0.0.1:8000/api/messages/";
 
 document.addEventListener('click', getEventTarget);
 document.addEventListener('keyup', getEventTarget);
@@ -282,7 +281,7 @@ function showDescriptionTextArea() {
 }
 
 function showAlertWordLeft(event) {
-    const wordsMax = 250;
+    var wordsMax = 250;
     if (event.target.value.length > 0){
         var wordsNumber = userMessage.value.match(/[a-zA-Z]+/g).length;
         var alertMessage = wordsMax - wordsNumber  + " words left."

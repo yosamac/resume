@@ -27,8 +27,6 @@ var html = {
     watch:[source + "/*.html", source + "/**/*.html"]
 }
 
-
-
 // javascript config
 var js = { 
     in : source + "js/resume.js",
@@ -80,8 +78,9 @@ var rwd = {
 
 // images optimization
 var img = {
-    in : rwd.out + '*',
-    out: rwd.out
+    in : source + "img/*",
+    out: dest + "img/", 
+    watch: [source + 'img/*', source + 'img/**/*']
 };
 
 gulp.task("html", function(){ 
@@ -157,7 +156,7 @@ gulp.task('imagemin', function() {
 });
 
 // default task
-gulp.task("default", ["html", "js", "sass", "fonts", "responsive", "imagemin"], function() {
+gulp.task("default", ["html", "js", "sass", "fonts", "imagemin"], function() {
 
     // iniciar BrowserSync
     browserSync.init({
@@ -165,6 +164,7 @@ gulp.task("default", ["html", "js", "sass", "fonts", "responsive", "imagemin"], 
         server: dest, // actúa como proxy enviando las peticiones a sparrest
         browser: "google chrome"
     });
+    gulp.watch(html.watch, ["html"]);
 
     gulp.watch(scss.watch, ["sass"]);
 
@@ -172,6 +172,6 @@ gulp.task("default", ["html", "js", "sass", "fonts", "responsive", "imagemin"], 
 
     gulp.watch(js.watch, ["js"]);
 
-    gulp.watch(rwd.watch, ["responsive", "imagemin"]);
+    gulp.watch(img.watch, ["imagemin"]);
 
 });

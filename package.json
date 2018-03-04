@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Yosnier interactive resume",
+  "author": "Yosnier Samon Macias",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosama/resume.git"
+  },
+  "keywords": [
+    "Interactive",
+    "Resume",
+    "Software",
+    "developer"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosama/resume/issues"
+  },
+  "homepage": "https://github.com/yosama/resume#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

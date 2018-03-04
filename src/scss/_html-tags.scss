@@ -1,0 +1,89 @@
+body {
+    background-color: #DCDCDC;
+    font-family: 'Roboto';
+	margin: 0;
+	padding: 0;
+	--main-text-color: #F7F7F7;
+	--secondary-text-color: #A4A4A4;
+    --third-text-color:#F9F9F9;
+	--main-bg-color:rgba(0,0,0,0.92);
+    --section-bg-color:#3DA0D4;
+	--menu-text-color:#42B5EF;
+	--menu-secondary-text-color:#5C79BD;
+	--tech-bg-color:#E1ECF4;
+	--tech-text-color:#7D90A7;
+    --box-boder-color:#E5E5E5;
+    --box-skills-color:#F9F9F9;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    height: auto;
+    line-height: 1em;
+    padding: 2%;
+}
+
+input[type=button], 
+input[type=submit], 
+button {
+    background-color: #2181BD!important;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900; 
+    letter-spacing: 0.15em;
+    margin: 4px 2px;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+    background-color: #fff;
+    background-color: #ccc;
+    border: 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+    font-size: 1em;
+    font-style: italic;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 2%;
+    resize: none;
+    width: 96%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+thead > tr {
+    background-color: #F5F5F5;
+}
+
+th {
+    height: 30px;
+    text-align: left
+}
+
+th, 
+td {
+    border-bottom: 1px solid #fff;
+    padding: 8px;
+    width: 5px;
+}
+
+tbody > tr:hover {
+    cursor: pointer;
+}

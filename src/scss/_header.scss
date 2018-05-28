@@ -1,96 +1,61 @@
-@keyframes typing {
-    from { 
-        width: 0; 
+#side-nav {
+    .navbar-brand {};
+    .navbar-nav .nav-item .nav-link{
+        font-weight: 600;
+        text-transform: uppercase;
+        color:$tech-text-color;
     }
 }
 
-@keyframes blink-caret {
-    50% { border-color: transparent; }
-}
-
-.clearfix:after {
-    content: " ";
-    clear: both;
-	display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-.navbar {
-    background-color: var(--main-text-color);
-    background-color: #F7F7F7;
-	position: fixed;
-	top: 0;
-    width:100%;
-    z-index: 1;
-}
-
-.navbar > .navbar-list {
-    float:left;
-	font-size: 0px;
-	list-style-type: none;
-	margin:0;
-}
-
-.navbar > .navbar-list > .navbar-item {
-    font-size: 16px;
-	display: inline;
-}
-
-.navbar > .navbar-list > .navbar-item a {
-    color: var(--main-bg-color);
-    color: rgba(0,0,0,0.92);
-	display: inline-block;	
-	padding: 20px;
-	text-decoration: none;
-}
-
-.navbar > .navbar-list > .navbar-item.active a {
-    color: var(--main-text-color);
-    color: #F7F7F7;
-    background-color: var(--section-bg-color);
-    background-color: #3DA0D4
-}
-
-.navbar > .navbar-list > .navbar-item a:hover{
-     color: var(--main-text-color) ;
-     color:#F7F7F7;
-     background-color: var(--section-bg-color);
-     background-color: #3DA0D4;
-}
-
-.header-img {
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url(https://www.yosamac.com/img/backstrech.jpg);
+@media (min-width: 992px) {
+  #side-nav {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: $sidebar-base-width;
+    .navbar-brand {
+      display: flex;
+      margin: auto auto 0;
+      .img-profile {
+        border: 0.5rem solid fade-out($white, 0.8);
+        max-width: 10rem;
+        max-height: 10rem;
+        margin-bottom: .5rem!important;
+      }
+      
+    }
+    .navbar-collapse {
+      align-items: flex-start;
+      display: flex;
+      flex-grow: 0;
+      margin-bottom: auto;
+      width: 100%;
+      .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        .nav-item {
+          display: block;
+          .nav-link {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.bg-primary {
+  background-color: $tech-bg-color;
 }
 
-.header-title {
-    animation-delay: 5s;
-    -webkit-animation-delay: 5s;
-    -moz-animation-delay: 5s;
-    -o-animation-delay: 5s;
-    color: #D1ECFD;
-    font-size: 100px;
-    position: absolute;
-    top:20%;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
+.rounded-circle {
+ border-radius: 50%!important;
 }
 
-.header-quoted {
-    position: absolute;
-    top: 46%;
-    left: 32%;
-    z-index: 1;
-    text-align: center;
-    color: #D1ECFD;
-    font-size: 60px;
-    width: calc(0.55em * 18);
-    width: 18ch;
-    white-space: nowrap;
-    overflow: hidden;
+.d-none {
+  display: none!important;
 }
+
